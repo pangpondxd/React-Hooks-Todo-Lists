@@ -8,9 +8,9 @@ if (typeof window !== "undefined") {
     }
   }
 
-export const taskReducer = (state = initialState, action) => {
+export const subTaskReducer = (state = initialState, action) => {
     switch (action.type) {
-      case "ADD_TO_TASK":
+      case "ADD_TO_SUBTASK":
         return action.payload;
       default:
         return state;

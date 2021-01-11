@@ -1,5 +1,6 @@
 import { Button, Card, Divider, Input, Space, Typography } from "antd";
 import styled from "styled-components";
+import TaskForm from "./components/TaskForm";
 
 const Container = styled.div`
   display: flex;
@@ -14,37 +15,7 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
-      <Space>
-        <Input style={{ width: 400 }} placeholder="Enter Task Name" />
-        <Button type="primary">Create Task</Button>
-      </Space>
-      <Space direction="vertical" style={{ marginTop: 24 }}>
-        <Card
-          title="Sample Task"
-          style={{ width: 600 }}
-          extra={<Button type="primary">Duplicate</Button>}
-        >
-          <Space direction="vertical" style={{ width: "100%" }}>
-            <Space>
-              <Input placeholder="Enter Subtask Name" style={{ width: 400 }} />
-              <Button type="primary">Add Task</Button>
-            </Space>
-            <Divider />
-            <Space>
-              <Typography.Text>Subtask Name (Todo)</Typography.Text>
-              <Button type="primary">Done</Button>
-              <Button type="danger">Delete</Button>
-            </Space>
-            <Space>
-              <Typography.Text style={{ textDecoration: "line-through" }}>
-                Subtask Name (Done)
-              </Typography.Text>
-              <Button type="primary">Undone</Button>
-              <Button type="danger">delete</Button>
-            </Space>
-          </Space>
-        </Card>
-      </Space>
+     <TaskForm />
     </Container>
   );
 }
